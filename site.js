@@ -49,7 +49,7 @@
     if (!form.reportValidity()) return;
     lastInquiry = inquiryText();
     const subject = `Packaging inquiry — ${document.getElementById('company').value.trim()}`;
-    const mailto = `mailto:info@empack.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lastInquiry)}`;
+    const mailto = `mailto:info@emeraldpckg.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lastInquiry)}`;
     document.getElementById('form-feedback').hidden = false;
     window.location.href = mailto;
   });

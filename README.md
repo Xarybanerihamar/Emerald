@@ -1,28 +1,38 @@
-# Emerald Packaging — GitHub Pages (flat folder fix)
+# Emerald Packaging — GitHub Pages website
 
-All required website files are in **one folder**. There are **no assets/, css/, or js/ directories** and no custom domain setup. This is meant for GitHub's web **Add file → Upload files** interface.
+A complete 5-page static website for Emerald Packaging, using the selected green loop-and-leaf logo.
 
-## Fix your existing `Emerald` repository
+## Included
+- `index.html` — Home
+- `about.html` — Our Story
+- `solutions.html` — Packaging Solutions
+- `sustainability.html` — Sustainability
+- `contact.html` — Contact & project inquiry form
+- `styles.css` — responsive styles
+- `site.js` — mobile navigation, packaging selector, and inquiry email draft
+- `emerald-logo.png` — approved horizontal logo with transparent background
+- `emerald-mark.png` — approved icon only with transparent background
+- `favicon.png` — browser tab icon
+- `.nojekyll` — GitHub Pages compatibility
 
-1. Extract `emerald-github-fixed.zip` on your computer.
-2. Open your GitHub repository `Emerald` (the main **Code** tab).
-3. Click **Add file → Upload files**.
-4. Drag in all the extracted files (not the ZIP itself). Use the individual files, such as `index.html`, `styles.css`, `site.js`, and `emerald-logo.svg`.
-5. Click **Commit changes** to update/replace files of the same names.
-6. Open `https://xarybanerihamar.github.io/Emerald/` and hard refresh with Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac) once GitHub Pages has republished.
+## Business contact details
+Phone: **747-316-8240** (`tel:+17473168240`)
+Email: **info@emeraldpckg.com**
 
-If GitHub's upload form refuses overwriting, edit/commit each HTML page's paths in place, or delete the previous page file before uploading its replacement.
+## How to update an existing GitHub Pages repository
+1. Extract this ZIP on your computer.
+2. Open your GitHub `Emerald` repository in the Code tab.
+3. Choose **Add file → Upload files** and drag the extracted files (not the ZIP). Keep all files in the main repository folder; do not make an `assets/` directory.
+4. Commit to `main`. Check **Settings → Pages** is using `main` and `/(root)`.
+5. Visit your GitHub Pages site after its next publish and hard-refresh if a cached version appears.
 
-**No custom domain, DNS settings, or phone number have been configured.**
+The new design references `emerald-logo.png`, `favicon.png`, `site.js`, and `styles.css` directly from the root. You can delete the old unused `.svg` branding files from GitHub later if desired.
 
-The GitHub Pages branch should be `main` with source `/(root)` (Settings → Pages). `index.html` must be at the root. The extra `download` file shown in your previous screenshot is not part of this package and is not needed for this site.
+## Contact form
+The inquiry form is **email-draft based**, not a server-hosted submit form. It prepares an email to **info@emeraldpckg.com** inside the visitor's mail application; the visitor must press Send. The form does not automatically deliver inquiries, and users without a configured mail application may need to copy the inquiry and email it manually.
 
-## What's changed
+## Photos
+The existing design loads external real Unsplash photos. For attribution and license review see `PHOTO_CREDITS.md`. Hosting the photos locally is a separate optional improvement.
 
-All five HTML pages now point directly to `styles.css`, `site.js`, `emerald-logo.svg`, and `favicon.svg` in the same directory. Relative links work for the project URL `/Emerald/` and for any other GitHub Pages repo name. Nothing requires an `assets` folder.
-
-## Notes
-
-- The form opens the visitor's email app; it is not a server-side form. The recipient is currently `info@empack.com`.
-- The images are linked directly from Unsplash and will require an internet connection. See `PHOTO_CREDITS.md`.
-- The site has 5 pages, a mobile menu, and an interactive packaging selector.
+## Domain
+No CNAME or DNS settings are included. The site works under the repository's standard GitHub Pages URL, and you can configure your domain later.
