@@ -1,36 +1,28 @@
-# Emerald Packaging — GitHub Pages Website
+# Emerald Packaging — GitHub Pages (flat folder fix)
 
-Five-page static website. Ready to publish on **GitHub Pages**, with **no custom domain configuration** included.
+All required website files are in **one folder**. There are **no assets/, css/, or js/ directories** and no custom domain setup. This is meant for GitHub's web **Add file → Upload files** interface.
 
-## Upload to GitHub
+## Fix your existing `Emerald` repository
 
-1. Create a new repository on GitHub (for example, `emerald-website`).
-2. Upload **the contents of this folder** to the top level of that repository. `index.html` must be at the repository root alongside `about.html`, `assets/`, `css/`, and `js/`. **Do not upload the ZIP as one file, or put everything in an extra folder.**
-3. In your repository, select **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose your main branch and `/(root)`, then **Save**.
-6. GitHub will display the website URL in the Pages settings after publishing. It may be a `username.github.io/repository-name/` address. All site navigation and asset links are relative so this project URL is supported.
+1. Extract `emerald-github-fixed.zip` on your computer.
+2. Open your GitHub repository `Emerald` (the main **Code** tab).
+3. Click **Add file → Upload files**.
+4. Drag in all the extracted files (not the ZIP itself). Use the individual files, such as `index.html`, `styles.css`, `site.js`, and `emerald-logo.svg`.
+5. Click **Commit changes** to update/replace files of the same names.
+6. Open `https://xarybanerihamar.github.io/Emerald/` and hard refresh with Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac) once GitHub Pages has republished.
 
-No Node.js, frameworks, or build command are necessary. The empty `.nojekyll` file tells GitHub Pages to serve the static files directly.
+If GitHub's upload form refuses overwriting, edit/commit each HTML page's paths in place, or delete the previous page file before uploading its replacement.
 
-## Pages and files
+**No custom domain, DNS settings, or phone number have been configured.**
 
-- `index.html` — home
-- `about.html` — company story
-- `solutions.html` — products, capabilities, and interactive packaging selector
-- `sustainability.html` — materials and sustainability information
-- `contact.html` — locations and email-draft inquiry form
-- `css/styles.css` — styling and responsive layout
-- `js/site.js` — mobile menu, selector, and form behavior
-- `assets/` — logo and favicon
+The GitHub Pages branch should be `main` with source `/(root)` (Settings → Pages). `index.html` must be at the root. The extra `download` file shown in your previous screenshot is not part of this package and is not needed for this site.
 
-## Before going live
+## What's changed
 
-- No phone number has been included.
-- The contact form **does not send directly**: it opens the visitor's email app with a prefilled message to `info@empack.com`. Change that email in `js/site.js` and the `.html` pages when your new address is ready.
-- Photos are **real, non-AI stock photography** currently loaded from Unsplash URLs. They are not included as image files. See `PHOTO_CREDITS.md` for sources and review rights for your use.
-- Any photos of equipment or facilities are illustrative, not proof they depict Emerald's actual operations.
-- Review company facts, copy, and sustainability claims, and approve the new logo before public launch.
-- The design uses Google Fonts, so a network connection is needed to load the custom fonts.
+All five HTML pages now point directly to `styles.css`, `site.js`, `emerald-logo.svg`, and `favicon.svg` in the same directory. Relative links work for the project URL `/Emerald/` and for any other GitHub Pages repo name. Nothing requires an `assets` folder.
 
-This package intentionally contains **no `CNAME`, DNS instructions, custom-domain setup, `robots.txt`, or domain-specific sitemap**. You can configure your domain separately whenever you want.
+## Notes
+
+- The form opens the visitor's email app; it is not a server-side form. The recipient is currently `info@empack.com`.
+- The images are linked directly from Unsplash and will require an internet connection. See `PHOTO_CREDITS.md`.
+- The site has 5 pages, a mobile menu, and an interactive packaging selector.
